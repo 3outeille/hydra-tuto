@@ -7,10 +7,13 @@ import hydra
 
 @hydra.main(config_name="config")
 def my_app(cfg: DictConfig) -> None:
+    print(cfg.node.loompa)
     assert cfg.node.loompa == 10  # attribute style access
     assert cfg["node"]["loompa"] == 10  # dictionary style access
-    assert cfg.node.zippity == 10  # Variable interpolation
-    assert isinstance(cfg.node.zippity, int)  # Variable interpolation inherits the type
+    print(cfg.node.zippity, type(cfg.node.zippity))
+    print(float(cfg.node.zippity), type(float(cfg.node.zippity)))
+    assert cfg.node.zippity == 0.1  # Variable interpolation
+    assert isinstance(cfg.node.zippity, float)  # Variable interpolation inherits the type
     assert cfg.node.do == "oompa 10"  # string interpolation
 
     # Accessing a field that is not in the config results in an exception:

@@ -1,0 +1,5 @@
+dataset:
+  name: imagenet
+model:
+  name: resnet
+  num_layers: 50

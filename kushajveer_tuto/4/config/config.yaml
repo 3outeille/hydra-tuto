@@ -1,0 +1,7 @@
+defaults:
+  - dataset: imagenet
+  - model: resnet
+  - dataset_model: ${defaults.0.dataset}_${defaults.1.model}
+    optional: true
+  - hydra/job_logging: colorlog
+  - hydra/hydra_logging: colorlog

@@ -1,5 +1,5 @@
 node:                         # Config is hierarchical
-  loompa: 10                  # Simple value
-  zippity: ${node.loompa}     # Value interpolation
+  loompa: null # Simple value
+  zippity: 1/10     # Value interpolation
   do: "oompa ${node.loompa}"  # String interpolation
   waldo: ???                  # Missing value, must be populated prior to access

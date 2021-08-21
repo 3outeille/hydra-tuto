@@ -1,0 +1,6 @@
+dataset:
+  name: cifar10
+  feature_size: 5
+model:
+  name: resnet
+  num_layers: 5

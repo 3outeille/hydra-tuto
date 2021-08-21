@@ -1,0 +1,4 @@
+### config/config.yaml
+
+batch_size: 10
+lr: 1e-4
